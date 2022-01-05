@@ -1,4 +1,3 @@
-import { Sigin } from "./src/screens/signin";
 import { useFonts } from "expo-font";
 import { Inter_400Regular, Inter_500Medium } from "@expo-google-fonts/inter";
 import {
@@ -7,6 +6,7 @@ import {
 } from "@expo-google-fonts/rajdhani";
 import AppLoading from "expo-app-loading";
 import { StatusBar } from "react-native";
+import { Routes } from "./src/routes";
 
 export default function App() {
     const [fontsLoaded] = useFonts({
@@ -25,7 +25,7 @@ export default function App() {
                 translucent
                 backgroundColor="transparent"
             />
-            <Sigin />
+            <Routes />
         </>
     );
 }
