@@ -1,5 +1,5 @@
 import { View, Text } from "react-native";
-import { RectButton, RectButtonProps } from "react-native-gesture-handler";
+import { RectButton } from "react-native-gesture-handler";
 import { IAppointment } from "../../@types";
 import { categories } from "../../utils/categories";
 import { GuildIcon } from "../GuildIcon";
@@ -22,7 +22,10 @@ export function Appointment({ data, ...rest }: IAppointment) {
                     style={styles.guildIconContainer}
                     colors={[secondary50, secondary70]}
                 >
-                    <GuildIcon />
+                    <GuildIcon
+                        guildId={data.guild.id}
+                        iconId={data.guild.icon}
+                    />
                 </LinearGradient>
                 <View style={styles.content}>
                     <View style={styles.header}>
